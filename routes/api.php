@@ -23,8 +23,13 @@ Route::group([], function () {
     // APIS Libres
 
     Route::post('index', 'UserController@index');
+    Route::post('inicio', 'UserController@inicio');
+
     Route::post('login', 'UserController@login');
+    Route::post('registro', 'UserController@registro');
     Route::post('signup', 'UserController@signup');
+
+    Route::post('reniec', 'UserController@reniec');
 
     Route::group([
       'middleware' => 'auth:api'
